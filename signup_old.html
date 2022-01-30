@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata, the below is standard. Browsers use this to configure settings -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- What text people see on the tab -->
+    <title> Get started </title>
+
+    <!-- CSS Goes Here -->
+    <!-- Select ID:
+        #[id]: {
+            ... CSS
+        }
+
+        Select Class:
+        .[class_name]: {
+            ... CSS
+        }
+    -->
+     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+   
+
+</head>
+<body>
+
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div -->
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!-- <a class="navbar-item" href="templates/dash.html">
+                <img src="templates/dash.html" width="112" height="28">
+            </a> -->
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <!-- <a class="navbar-item" href="templates/dash.html">
+                    Dashboard
+                </a> -->
+
+                <a class="navbar-item" href="./goals.html">
+                    Goals
+                </a>
+
+                <a class="navbar-item" href="./prog.html">
+                    Progress
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            About
+                        </a>
+                        <a class="navbar-item">
+                            Jobs
+                        </a>
+                        <a class="navbar-item">
+                            Contact
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="./signup.html">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light" href="./login.html">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <p class="title">
+                    Dashboard
+                </p>
+                <p class="subtitle">
+                    Hello, <span id="f-name-span"></span> <span id="l-name-span"></span>
+                </p>
+            </div>
+        </section>
+
+        <form action="/saves_account" method="post">
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">Name</label>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control is-expanded">
+                        <input class="input" type="text" name="first_name" placeholder="First name">
+                        
+                    </p>
+                </div>
+                <div class="field">
+                    <p class="control is-expanded ">
+                        <input class="input" type="text" name="last_name" placeholder="Last name">
+                        
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">Account</label>
+            </div>
+            <div class="field-body">
+
+                <div class="field">
+                    <p class="control is-expanded">
+                        <input class="input" type="email" name="email" placeholder="Email">
+                        
+                    </p>
+                </div>
+
+                <div class="field">
+                    <p class="control is-expanded ">
+                        <input class="input" type="text" name="password" placeholder="Password">
+                        
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">Emergency Fund</label>
+            </div>
+            <div class="field-body">
+                <p class="control">
+                    <span class="select">
+                        <select>
+                            <option>$</option>
+                            <option>£</option>
+                            <option>€</option>
+                        </select>
+                    </span>
+                </p>
+
+                <p class="control">
+                    <input class="input" type="text" name="emer_fund" placeholder="Amount of money">
+                </p>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">Retirement</label>
+            </div>
+            <div class="field-body">
+                <p class="control">
+                    <span class="select">
+                        <select>
+                            <option>$</option>
+                            <option>£</option>
+                            <option>€</option>
+                        </select>
+                    </span>
+                </p>
+
+                <p class="control">
+                    <input class="input" type="text" name="retirement" placeholder="Amount of money">
+                </p>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">Traditional IRA</label>
+            </div>
+            <div class="field-body">
+                <p class="control">
+                    <span class="select">
+                        <select>
+                            <option>$</option>
+                            <option>£</option>
+                            <option>€</option>
+                        </select>
+                    </span>
+                </p>
+
+                <p class="control">
+                    <input class="input" type="text" name="trad_ira" placeholder="Amount of money">
+                </p>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">Roth IRA</label>
+            </div>
+            <div class="field-body">
+                <p class="control">
+                    <span class="select">
+                        <select>
+                            <option>$</option>
+                            <option>£</option>
+                            <option>€</option>
+                        </select>
+                    </span>
+                </p>
+
+                <p class="control">
+                    <input class="input" type="text" name="roth_ira" placeholder="Amount of money">
+                </p>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">Stock Portfolio</label>
+            </div>
+            <div class="field-body">
+                <p class="control">
+                    <span class="select">
+                        <select>
+                            <option>$</option>
+                            <option>£</option>
+                            <option>€</option>
+                        </select>
+                    </span>
+                </p>
+
+                <p class="control">
+                    <input class="input" type="text" name="stock_prof" placeholder="Amount of money">
+                </p>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">Savings</label>
+            </div>
+            <div class="field-body">
+                <p class="control">
+                    <span class="select">
+                        <select>
+                            <option>$</option>
+                            <option>£</option>
+                            <option>€</option>
+                        </select>
+                    </span>
+                </p>
+
+                <p class="control">
+                    <input class="input" type="text" name="savings" placeholder="Amount of money">
+                </p>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label">
+                <!-- Left empty for spacing -->
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <div class="control">
+                        
+                        <button type="submit" class="button is-primary">
+                            Show me the money!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+        <!-- JavaScript Goes Here -->
+        <script>
+
+            // JavaScript Object
+            // Key : Value
+
+            var user = {
+            "user-id": "USER ID",
+            "f-name": "Ilse",
+            "l-name": "Moya",
+            "goal": "This is what you should do today",
+            "emer_fund": "777.77",
+            "retirement": "1111.11",
+            "trad_ira": "4.04",
+            "roth_ira": "8.88",
+            "stock_prof": "666",
+            "savings": "333",
+            "goal_score": "1",
+            "overal_score": "1"
+            }
+
+            // https://www.w3schools.com/js/js_htmldom_document.asp
+            var fname_span = document.getElementById("f-name-span")
+            var lname_span = document.getElementById("l-name-span")
+            var goal_span = document.getElementById("goal-span")
+
+            fname_span.textContent = user['f-name']
+            lname_span.textContent = user['l-name']
+            goal_span.textContent = user['goal']
+
+        </script>
+</body>
+</html>

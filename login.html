@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata, the below is standard. Browsers use this to configure settings -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- What text people see on the tab -->
+    <title> Get started </title>
+
+    <!-- CSS Goes Here -->
+    <!-- Select ID:
+        #[id]: {
+            ... CSS
+        }
+
+        Select Class:
+        .[class_name]: {
+            ... CSS
+        }
+    -->
+     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+   
+
+</head>
+<body>
+
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="./index.html">
+                <img src="Verdanda2.png" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="./index.html">
+                    Dashboard
+                </a>
+
+                <a class="navbar-item" href="./growth.html">
+                    Growth
+                </a>
+
+                <a class="navbar-item" href="./adjust.html">
+                    Adjust
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            Resources
+                        </a>
+                        <a class="navbar-item">
+                            Activity
+                        </a>
+                        <a class="navbar-item">
+                            Contact
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="./signup.html">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light" href="./login.html">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <p class="title">
+                    Welcome back,
+                </p>
+                <p class="subtitle">
+                    it's time to make your rainy day fund a little greener.
+                </p>
+            </div>
+        </section>
+
+        <p class="mt-4">
+        </p>
+        <div class="container">
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Account</label>
+                </div>
+                <div class="field-body">
+
+                    <div class="field">
+                        <p class="control is-expanded">
+                            <input class="input" type="email" placeholder="Email">
+
+                        </p>
+                    </div>
+
+                    <div class="field">
+                        <p class="control is-expanded ">
+                            <input class="input" type="text" placeholder="Password">
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <!-- Left empty for spacing -->
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <a button class="button is-primary" href="./index.html">
+                                Show me the money!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <p class="mb-4">
+    </p>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                © 2022 <strong>Verdanda</strong> by <a href="https://devpost.com">Our Team :)</a>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Goes Here -->
+    <script>
+
+        // JavaScript Object
+        // Key : Value
+
+        var user = {
+        "user-id": "USER ID",
+        "f-name": "Kristen",
+        // Specify where the username will be imported from
+        "l-name": "Hallas",
+        "goal": "The assets in your stock portfolio are growing! If you make a quick sale, you can shift the profits into your emergency fund or savings.",
+        "emer_fund": "1234.56",
+        "retirement": "3456.78",
+        "trad_ira": "2156.04",
+        "roth_ira": "1265.40",
+        "stock_prof": "+54.64",
+        "savings": "500.01",
+        "goal_score": "25",
+        "overal_score": "35",
+        "recent1": "Stock portfolio changed from +24.56 to +54.64",
+        "recent2": "Employer contributed to Traditional IRA",
+        "recent3": "Employer contributed to Roth IRA",
+        "recent4": "Savings changed from $25.00 to $500.01",
+        "recent5": "Emergency fund changed from $234.56 to $1234.56"
+        //Json import here ^^ for the transaction portion
+        }
+
+        // https://www.w3schools.com/js/js_htmldom_document.asp
+        var fname_span = document.getElementById("f-name-span")
+        var lname_span = document.getElementById("l-name-span")
+        var goal_span = document.getElementById("goal-span")
+        var emer_fund_span = document.getElementById("emer-fund-span")
+        var retirement_span = document.getElementById("retirement-span")
+        var trad_ira_span = document.getElementById("trad-ira-span")
+        var roth_ira_span = document.getElementById("roth-ira-span")
+        var stock_prof_span = document.getElementById("stock-prof-span")
+        var savings_span = document.getElementById("savings-span")
+        var goal_score_span = document.getElementById("goal-score-span")
+        var goal_score_prog_num = document.getElementById("goal_score_prog")
+        var recent1_span = document.getElementById("recent1-span")
+        var recent2_span = document.getElementById("recent2-span")
+        var recent3_span = document.getElementById("recent3-span")
+        var recent4_span = document.getElementById("recent4-span")
+        var recent5_span = document.getElementById("recent5-span")
+
+        fname_span.textContent = user['f-name']
+        lname_span.textContent = user['l-name']
+        goal_span.textContent = user['goal']
+        emer_fund_span.textContent = user['emer_fund']
+        retirement_span.textContent = user['retirement']
+        trad_ira_span.textContent = user['trad_ira']
+        roth_ira_span.textContent = user['roth_ira']
+        stock_prof_span.textContent = user['stock_prof']
+        savings_span.textContent = user['savings']
+        goal_score_span.textContent = users['goal_score']
+        goal_score_prog.setAttribute("value", users['goal_score'])
+        recent1_span.textContent = user['recent1']
+        recent2_span.textContent = user['recent2']
+        recent3_span.textContent = user['recent3']
+        recent4_span.textContent = user['recent4']
+        recent5_span.textContent = user['recent5']
+    </script>
+</body>
+</html>
